@@ -4,9 +4,9 @@ import java.util.stream.*;
 public class StreamOperations {
     public static void main(String[] stmts){
         List<Integer> numbers = IntStream.rangeClosed(1,100).boxed().collect(Collectors.toList());
-         int max = numbers.stream().max(Integer::compare).get();
-         int min = numbers.stream().min(Integer::compare).get();
-         System.out.println("Max: " + max + ", Min: " + min);
+        int max = numbers.stream().max(Integer::compare).get();
+        int min = numbers.stream().min(Integer::compare).get();
+        System.out.println("Max: " + max + ", Min: " + min);
 
 
         long listDivBy2and4 = numbers.stream().filter(n-> n%2 == 0 && n%4 == 0).count();
